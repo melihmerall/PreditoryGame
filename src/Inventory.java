@@ -1,8 +1,33 @@
 public class Inventory {
     private Weapon weapon;
     private Shield shield;
-    private boolean water;
     private boolean food;
+    private boolean water;
+    private boolean punc;
+
+    public boolean isFood() {
+        return food;
+    }
+
+    public void setFood(boolean food) {
+        this.food = food;
+    }
+
+    public boolean isWater() {
+        return water;
+    }
+
+    public void setWater(boolean water) {
+        this.water = water;
+    }
+
+    public boolean isPunc() {
+        return punc;
+    }
+
+    public void setPunc(boolean punc) {
+        this.punc = punc;
+    }
 
     public Shield getShield() {
         return shield;

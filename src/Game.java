@@ -19,6 +19,7 @@ public class Game {
             System.out.println("1- Safe House");
             System.out.println("2- Store");
             System.out.println("3- Enter The Cave - Battle Map");
+
             System.out.println("4- Enter The Forest - Battle Map");
             System.out.println("5- Enter The River - Battle Map");
             System.out.println("0- Stop the game");
@@ -44,6 +45,7 @@ public class Game {
                     break;
                 case 5:
                     location = new RiverMap(player);
+                    break;
                 default:
                     System.out.println("default area is safe house");
                     location = new SafeLocation(player);
