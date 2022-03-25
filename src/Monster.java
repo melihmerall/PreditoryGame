@@ -6,8 +6,6 @@ public class Monster {
     private int dropCoin;
     private int defHealth;
 
-
-
     public int getDefHealth() {
         return defHealth;
     }

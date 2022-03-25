@@ -28,9 +28,9 @@ public class Weapon {
     }
     public static Weapon[] weapons(){
         Weapon[] weaponsList = new Weapon[3];
-        weaponsList[0] = new Weapon(" Gun - ",1,2,5);
-        weaponsList[1] = new Weapon(" Sword - ",2,3,35);
-        weaponsList[2] = new Weapon(" ShotGun - ",3,7,45);
+        weaponsList[0] = new Weapon(" Gun - ",1,5,5);
+        weaponsList[1] = new Weapon(" Sword - ",2,6,35);
+        weaponsList[2] = new Weapon(" ShotGun - ",3,8,45);
         return weaponsList;
     }
     public static Weapon getWeaponObjByID(int id) {

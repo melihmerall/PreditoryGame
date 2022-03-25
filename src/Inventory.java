@@ -2,8 +2,11 @@ public class Inventory {
     private Weapon weapon;
     private Shield shield;
     private boolean food;
+    private String foodDrop;
     private boolean water;
+    private String waterDrop;
     private boolean punc;
+    private String puncDrop;
 
     public boolean isFood() {
         return food;
@@ -45,9 +48,46 @@ public class Inventory {
         this.weapon = weapon;
     }
 
+    public String getFoodDrop() {
+        if(foodDrop == null)
+        {
+            foodDrop = "Empty Slot";
+        }
+        return foodDrop;
+    }
+
+    public void setFoodDrop(String foodDrop) {
+        this.foodDrop = foodDrop;
+    }
+
+    public String getWaterDrop() {
+        if(waterDrop == null)
+        {
+            waterDrop = "Empty Slot";
+        }
+        return waterDrop;
+    }
+
+    public void setWaterDrop(String waterDrop) {
+        this.waterDrop = waterDrop;
+    }
+
+    public String getPuncDrop() {
+        if(puncDrop == null)
+        {
+            puncDrop = "Empty Slot";
+        }
+        return puncDrop;
+    }
+
+    public void setPuncDrop(String puncDrop) {
+        this.puncDrop = puncDrop;
+    }
+
     public Inventory() {
         this.weapon = new Weapon(" Hand ",-1,0,0);
         this.shield = new Shield(" Hand ",-1,0,0);
+
 
     }
 }
