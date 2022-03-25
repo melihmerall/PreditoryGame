@@ -1,5 +1,6 @@
 # Preditory Game with Java - BASİC TYPE
 This is a console game. Purpose is war with monster and defeat all of them.<br>
+You can Run with main.java.
 <br>
 
 ## Information
