@@ -105,7 +105,7 @@ public class BattleLocation extends Location {
                     afterDamage();
                     if (this.getMonster().getHealth() > 0) {
                         System.out.println("---------------------");
-                        System.out.println(i+"Monster Attack You!");
+                        System.out.println(i+".Monster Attack You!");
                         System.out.println("----------------------");
                         if (monsterDamage < 0) {
                             monsterDamage = 0;
