@@ -1,5 +1,5 @@
 public class Weapon {
-    private String name;
+    protected String name;
     private int id;
     private int damage;
     private int coin;

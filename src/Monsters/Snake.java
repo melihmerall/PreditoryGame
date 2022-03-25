@@ -1,3 +1,4 @@
+package Monsters;
 import java.util.Random;
 
 public class Snake extends Monster{
@@ -23,5 +24,11 @@ public class Snake extends Monster{
     public Snake() {
         super(4, "Snake" ,3 , 12, 0,12);
 
+    }
+
+    private class Weapon {
+    }
+
+    private class Shield {
     }
 }

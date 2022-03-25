@@ -1,7 +1,5 @@
-import Heroes.GameHeroes;
-import jdk.swing.interop.SwingInterOpUtils;
+import Monsters.Monster;
 
-import java.util.Locale;
 import java.util.Random;
 
 public class BattleLocation extends Location {
@@ -64,7 +62,7 @@ public class BattleLocation extends Location {
             selectCase = selectCase.toUpperCase();
             if (selectCase.equals("W") && combat(monsterNumber)) {
                 if (combat(monsterNumber)) {
-                    System.out.println(this.getName() + "You win !!");
+                    System.out.println(this.getName() + " You win !!");
                 }else{
                     mainPage(player);
                 }
@@ -79,13 +77,13 @@ public class BattleLocation extends Location {
 
     public boolean combat(int monsterNumber) {
         for (int i = 1; i <= monsterNumber; i++) {
-            System.out.println(monsterNumber + "mosnter number");
             Random random = new Random();
             int randomDamageSnake = random.nextInt(4) + 3;
             int randomWarChoose = (int) (Math.random() * 2); // %50 ihtimalle ilk saldırı canavardan gelecek.
             this.getMonster().setHealth(this.getMonster().getDefHealth()); // Canavarın canını her defasında default hale getirdik.
             playerStats();
             monsterStats();
+
             int monsterDamage = this.getMonster().getDamage() - this.getPlayer().getInventory().getShield().getBlockRate();
             if (randomWarChoose == 0) {
                 System.out.println("---------------------------------------------");
@@ -107,7 +105,7 @@ public class BattleLocation extends Location {
                     afterDamage();
                     if (this.getMonster().getHealth() > 0) {
                         System.out.println("---------------------");
-                        System.out.println("Monster Attack You!");
+                        System.out.println(i+"Monster Attack You!");
                         System.out.println("----------------------");
                         if (monsterDamage < 0) {
                             monsterDamage = 0;
@@ -243,9 +241,9 @@ public class BattleLocation extends Location {
                     System.out.println("Sorry You dont earn anything. Try Again.");
                 }
             }
-            //else{return false;}
+            //else{return true;}
             if (this.getMonster().getHealth() < this.getPlayer().getHealth() && this.getMonster().getName() != "Snake") {
-                System.out.println("You Won !");
+                System.out.println("You Won ! - "+i+". Monster Dead.");
                 System.out.println("You earn Money!");
                 System.out.println("Drop coin: " + this.getMonster().getDropCoin());
 
@@ -268,7 +266,7 @@ public class BattleLocation extends Location {
             this.getPlayer().getInventory().setWaterDrop("Water");
         }
 
-        return true;
+        return false;
     }
 
     public void afterDamage() {
@@ -278,7 +276,7 @@ public class BattleLocation extends Location {
 
     public void monsterStats() {
         System.out.println("-------------------------------------");
-        System.out.println(this.getMonster().getName() + "Stats: ");
+        System.out.println(this.getMonster().getName() + " Stats: " );
         System.out.println("-----------------------------");
         System.out.println("Health: " + this.getMonster().getHealth());
         System.out.println("Damage: " + this.getMonster().getDamage());

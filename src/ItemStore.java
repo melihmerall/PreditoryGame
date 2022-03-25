@@ -1,4 +1,4 @@
-public class ItemStore extends NormalLocation{
+public class ItemStore extends NormalLocation {
 
     public ItemStore(Player player) {
         super(player, "Store");

@@ -1,3 +1,5 @@
+import Monsters.Snake;
+
 public class MineMap extends BattleLocation {
 
     public MineMap(Player player) {

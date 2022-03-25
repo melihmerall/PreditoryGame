@@ -1,4 +1,6 @@
-public class Monster {
+package Monsters;
+
+public abstract class Monster {
     private int id;
     private String name;
     private int damage;
